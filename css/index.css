@@ -1,0 +1,198 @@
+﻿.wrap-banner{
+	background:url("../images/banner.jpg");
+	background-attachment:fixed;
+	background-repeat:no-repeat;
+	background-size:cover;
+	background-position:center center;
+}
+.banner{width: 100%;height:600px;padding-top: 10rem;padding-right:10rem;box-sizing:border-box;}
+.banner .banner-content{width:100%;height:300px;text-align: right;}
+.banner .banner-content span{font-family:"微软雅黑";display:block;color:white;margin-bottom: 1.5rem;animation:contentAnimate .6s linear forwards;}
+.banner .banner-content span.name,.banner .banner-content span.hello{font-size:2.2rem; }
+.banner .banner-content span.work{font-size: 2.8rem;font-weight: bolder;}
+.banner .banner-content span.about{font-size: 1.4rem;line-height: 40px;background: #c80a48;display: inline-block;padding: 1rem 3.5rem;cursor: pointer;transition:all .4s linear;}
+.banner .banner-content span.about:hover{background: #fff;color:#066FA9;transition:all .4s linear;}
+@keyframes contentAnimate{
+	from{transform:translateX(80px);opacity: 0;}
+	to{transform:translateX(0px);opacity: 1;}
+}
+
+@font-face{
+	font-family:"Raphaelicons"; 
+	src:url("../fonts/raphaelicons-webfont.eot") format("eot"),
+	url("../fonts/raphaelicons-webfont.svg") format("svg"),
+	url("../fonts/raphaelicons-webfont.ttf") format("truetype"),
+	url("../fonts/raphaelicons-webfont.woff") format("woff");
+}
+.nav{width:100%;height:100px;line-height: 100px;background:#c80a48;font-size: 2rem;top:0;z-index:20;}
+.nav ul{display:inline-block;width:85%;}
+.nav ul li{display: inline-block;width:15%;height:100%;text-align: center;}
+.nav ul li a{color:#ccc;font-size: 2rem;display: block;width:100%;height:100%;}
+.nav ul li a.currentLi{color:#fff;}
+.nav>a.icon{display: inline-block;width:15%;height:100%;float: left;}
+.nav>a.icon:before{padding-left:50%;font-family: "Raphaelicons";content:attr(data-icon);color:#fff;font-size: 3.5rem;}
+.nav ul li a:hover{color:#fff;}
+
+
+.aboutme,.feets{width:100%;min-height:600px;background: #000;box-sizing:border-box;}
+.resume,.photo{overflow: hidden;width:100%;min-height: 600px;background: #333;padding-top:50px;box-sizing:border-box;}
+
+.aboutme{padding-top:50px;}
+.aboutme ul{width:90%;height:90%;margin:auto;height: 100%;text-align: center;}
+.aboutme ul li{display: inline-block;width:30%;height:100%;position: relative;opacity: 0;}
+.aboutme ul li.running{animation:contentAnimate .5s linear forwards;}
+.aboutme ul li img{width:100%;}
+@keyframes animateright{
+	from{transform:translateX(-80px);opacity: 0;}
+	to{transform:translateX(0px);opacity: 1;}
+}
+.aboutme ul li:before{transform:scale(1,0);transform-origin:bottom;transition:all .5s linear;position: absolute;content: "";width:100%;height:100%;background: #000;opacity: .4;}
+
+.aboutme ul li span{color:#c80a48;background:rgba(255,255,255,.5);text-align:center;display:block;padding:0 2rem;height:20px;line-height: 20px;position: absolute;left:0;}
+
+.aboutme ul li:first-child span{transform:translateX(-20%);transition:all .5s linear;opacity:0;top:30%;}
+.aboutme ul li:first-child span:nth-child(3){top:35%;transition-delay:.3s;}
+.aboutme ul li:first-child span:nth-child(4){top:40%;transition-delay:.6s;}
+.aboutme ul li:nth-child(1):hover span{transform:translateX(0);opacity: 1;transition:all .5s linear;}
+
+.aboutme ul li:nth-child(2) span{transform:translateY(40px);transition:all .5s linear;opacity:0;bottom:30%;left:0;}
+.aboutme ul li:nth-child(2) span:nth-child(3){bottom:25%;transition-delay:.3s;}
+.aboutme ul li:nth-child(2) span:nth-child(4){bottom:20%;transition-delay:.6s;}
+.aboutme ul li:nth-child(2):hover span{transform:translateY(0px);opacity: 1;transition:all .5s linear;}
+
+.aboutme ul li:nth-child(3) span{transition:all .5s linear;opacity:0;top:0;left:0;}
+.aboutme ul li:nth-child(3) span:nth-child(3){top:5%;transition-delay:.3s;}
+.aboutme ul li:nth-child(3) span:nth-child(4){top:10%;transition-delay:.6s;}
+.aboutme ul li:nth-child(3):hover span{opacity: 1;transition:all .5s linear;transform:translateY(300px);}
+
+.aboutme ul li:hover:before{transform:scale(1,1);transition:all .5s linear;}
+
+.resume,.contact{padding: 50px;}
+.resume h2,.photo h2,.contact h2{font-size: 3rem;color:white;font-weight: bolder;margin-bottom: 3rem;}
+.resume .resume-content,.resume .skills{width:50%;height:100%;float: left;}
+.resume .resume-content{color:white;font-size: 1.2rem;}
+.resume .skills span{display: block;width:100%;height:20px;line-height: 20px;color:#566366;font-size: 1.2rem;font-weight: bolder;}
+.resume .skills span.skill-name{margin-bottom: 10px;}
+.resume .skills span.xian{background: white;margin-bottom: 20px;}
+.resume .skills span.xian.other:before{animation:animateSpan .5s linear forwards;content:attr(data-num);display: block;width:90%;height:100%;background:#c80a48;color:white; text-align: right;padding-right: 5px;line-height: 20px;font-size: .8rem;}
+.resume .skills span:nth-child(4).other:before{animation:animateSpan1 .5s linear forwards;width:85%;}
+.resume .skills span:nth-child(6).other:before{animation:animateSpan2 .5s linear forwards;width:75%;}
+.resume .skills span:nth-child(8).other:before{animation:animateSpan3 .5s linear forwards;width:40%;}
+@keyframes animateSpan{
+	from{width:0;}
+	to{width:90%;}
+}
+@keyframes animateSpan1{
+	from{width:0;}
+	to{width:85%;}
+}
+@keyframes animateSpan2{
+	from{width:0;}
+	to{width:75%;}
+}
+@keyframes animateSpan3{
+	from{width:0;}
+	to{width:40%;}
+}
+
+
+.feets{padding: 50px;}
+.feets img{width: 100%;transform:scale(0,0);}
+.feets .running{animation:animationImg 1s linear forwards;opacity: 0;}
+@keyframes animationImg{
+	from{transform:scale(0,0);opacity: 0}
+	to{transform:scale(1,1);opacity: 1;}
+}
+
+.photo{padding: 50px;}
+.photo .photo-left,.photo .photo-right,.contact .contact-left,.contact .contact-right{display: none;width:50%;height:100%;float: left;position: relative;}
+.photo .photo-left img{width:100%;animation:contentAnimate .5s linear forwards;}
+.photo .photo-right ul li:nth-child(2){animation-delay:0.05s;}
+.photo .photo-right ul li:nth-child(3){animation-delay:0.1s;}
+.photo .photo-right ul li:nth-child(4){animation-delay:0.15s;}
+.photo .photo-right ul li:nth-child(5){animation-delay:0.2s;}
+.photo .photo-right ul li:nth-child(6){animation-delay:0.25s;}
+.photo .photo-right ul li:nth-child(7){animation-delay:0.3s;}
+.photo .photo-right ul li:nth-child(8){animation-delay:0.35s;}
+.photo .photo-right ul li:nth-child(9){animation-delay:0.4s;}
+.photo .photo-right ul li{float: left;width:30%;padding:0.75% 1.5% 0.75%;animation:contentAnimate .5s linear forwards;}
+.photo .photo-right ul li img{width: 100%;border:1px solid transparent;transition:all .5s linear;}
+.photo .photo-left .leftbtn{cursor:pointer;font-family:"Raphaelicons";font-size: 3.5rem;position: absolute;color:#fff;top:45%;left:0; opacity: .5;z-index: 20;}
+.photo .photo-left .rightbtn{cursor:pointer;font-family:"Raphaelicons";font-size: 3.5rem;position: absolute;color:#fff;top:45%;right:0;opacity: .5; z-index: 20;}
+.photo .photo-left:hover:before,.photo .photo-left:hover:after{opacity: 1;cursor: pointer;}
+.photo .photo-right ul li img.currentLi{border:1px solid #fff;}
+.photo .photo-right ul li:hover img{box-shadow: 0px 0px 1px 2px #fff;transform:scale(1.1);}
+
+
+.contact{background: #c80a48;width:100%;min-height:600px;box-sizing:border-box;}
+.contact:after{content: "";display: block;clear:both;}
+.contact .contact-left{animation:contentAnimate .5s linear forwards;box-sizing:border-box;}
+.contact .contact-right{animation:animateright .5s linear forwards;box-sizing:border-box;}
+.contact .contact-left label{display: block;font-size: 1.6rem;font-weight: bolder;color:white;margin-bottom: 1rem}
+.contact .contact-left input{width:100%;height:3rem;padding-left: 1rem;font-size: 1.2rem;margin-bottom: 2rem;box-sizing:border-box;}
+.contact .contact-right{padding: 2rem;box-sizing:border-box;font-size: 1.2rem;color:white;}
+.contact .contact-right span{display: block;}
+.contact .contact-right div{margin-bottom: 4rem;}
+
+
+
+@media only screen and (max-width: 768px){
+	html{font-size: 50%;}
+	.aboutme,.resume,.feets,.photo{min-height:300px;}
+	.aboutme ul li{height: 100%;}
+	.aboutme ul li:first-child span{top:25%;}
+	.aboutme ul li:first-child span:nth-child(3){top:35%;}
+	.aboutme ul li:first-child span:nth-child(4){top:45%;}
+	.aboutme ul li:nth-child(2) span{bottom:40%;}
+	.aboutme ul li:nth-child(2) span:nth-child(3){bottom:30%;}
+	.aboutme ul li:nth-child(2) span:nth-child(4){bottom:20%;}
+	.aboutme ul li:nth-child(3) span{top:0;}
+	.aboutme ul li:nth-child(3) span:nth-child(3){top:10%;}
+	.aboutme ul li:nth-child(3) span:nth-child(4){top:20%;}
+	.aboutme ul li:nth-child(3):hover span{transform:translateY(150px);}
+	.resume .skills span.skill-name{margin-bottom: 5px;}
+	.resume .skills span.xian{background: white;margin-bottom: 10px;}
+	.contact{min-height:300px;}
+	.contact .contact-left{height:100%;width:50%;}
+	.contact .contact-right{width:50%;height: 100%;}
+}
+@media only screen and (max-width: 480px) {
+	html{font-size: 35%;}
+	.banner .banner-content span.work{display: none;}
+	.nav{height:100%;line-height: 20px;background: #c80a48;}
+	.nav a.icon:before{display: none;}
+	.nav ul{width: 100%;height:100%;}
+	.nav ul li{width:100%;height:30%;}
+	.nav ul li a{height: 10px;}
+	.aboutme ul li{display: block;width:100%;}
+	.aboutme ul li img{width:100%;}
+	.aboutme,.resume,.feets,.photo{min-height:200px;}
+	.photo .photo-right,.photo .photo-left{width:100%; }
+	.contact{padding: 50px;overflow: hidden;}
+	.resume .resume-content,.resume .skills,.contact .contact-left,.contact .contact-right{width:100%;}
+	.contact{min-height:500px;padding:50px;}
+	.contact:after{content:"";display: block;clear:both;}
+	.contact .contact-left{height:50%;}
+	.contact .contact-right{width:100%;height: 50%;padding: 0}
+	.contact .contact-left input{margin-bottom: 1rem;}
+}
+@media only screen and (max-width: 320px){
+	html{font-size: 30%;}
+	.banner .banner-content span.work{display: none;}
+	.nav{height:100%;line-height: 20px;background: #c80a48;}
+	.nav a.icon:before{display: none;}
+	.nav ul{width: 100%;height:100%;}
+	.nav ul li{width:100%;height:30%;}
+	.nav ul li a{height: 10px;}
+	.aboutme ul li{display: block;width:100%;}
+	.aboutme ul li img{width:100%;}
+	.aboutme,.resume,.feets,.photo{min-height:200px;}
+	.photo .photo-right,.photo .photo-left{width:100%; }
+	.contact{padding: 50px;overflow: hidden;}
+	.resume .resume-content,.resume .skills,.contact .contact-left,.contact .contact-right{width:100%;}
+	.contact{min-height:500px;padding:50px;}
+	.contact:after{content:"";display: block;clear:both;}
+	.contact .contact-left{height:50%;}
+	.contact .contact-right{width:100%;height: 50%;padding: 0}
+	.contact .contact-left input{margin-bottom: 1rem;}
+}
